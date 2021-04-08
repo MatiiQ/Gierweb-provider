@@ -21,4 +21,4 @@ app.get('/users/find/tidies', function (req, res) {
   res.send(users.filter((user) => user.first_name.includes('tit')));
 })
  
-app.listen(env.PORT || 8080, () => console.log("jestem gotuw na twojego fiuta, kogucie"))
+app.listen(process.env.PORT || 8080, () => console.log("jestem gotuw na twojego fiuta, kogucie"))
