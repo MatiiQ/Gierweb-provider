@@ -37,7 +37,7 @@ app.get('/gamesUsers', function (req, res) {
   res.send(gamesUsers);
 })
 
-app.get('/gamesUsers?user=:id_user', function (req, res) {
+app.get('/gamesUsers?/user=:id_user', function (req, res) {
   res.set('Access-Control-Allow-Origin', '*');
   res.send(gamesUsers.filter((gamesUsers) => gamesUsers.id_user == req.params.id_user));
 })
