@@ -23,7 +23,11 @@ app.get('/users/find/tidies', function (req, res) {
   res.send(users.filter((user) => user.first_name.includes('tit')));
 })
 
-app.get('/gamesUsers:userId', function (req, res) {
+app.get('/gamesUsers', function (req, res) {
+  res.send(gamesUsers);
+})
+
+app.get('/gamesUsers/:userId', function (req, res) {
   res.send(users.find((gamesUsers) => gamesUsers.id_user == req.params.userId));
 })
 
