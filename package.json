@@ -11,7 +11,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "node prov.js"
+    "heroku-postbuild": "node prov.js",
+    "start": "node prov.js"
   },
   "author": "",
   "license": "ISC",
