@@ -37,9 +37,9 @@ app.get('/gamesUsers', function (req, res) {
   res.send(gamesUsers);
 })
 
-app.get('/gamesUsers/:userId', function (req, res) {
+app.get('/gamesUsers/:id_user', function (req, res) {
   res.set('Access-Control-Allow-Origin', '*');
-  res.send(gamesUsers.find((gamesUsers) => gamesUsers.id_user == req.params.userId));
+  res.send(gamesUsers.find((gamesUsers) => gamesUsers.id_user == req.params.id_user));
 })
 
 app.listen(process.env.PORT || 8080, () => console.log("jestem gotuw na twojego fiuta, kogucie"))
