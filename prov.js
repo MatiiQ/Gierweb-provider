@@ -3,8 +3,13 @@ const app = express()
 const fs = require('fs')
  
 let users = JSON.parse(fs.readFileSync('User.json'))['62fbf740']
-let game_user = JSON.parse(fs.readFileSync('gameDB.json'))
+let games = JSON.parse(fs.readFileSync('gameDB.json'))
 let gamesUsers = JSON.parse(fs.readFileSync('game_user-U.json'))
+
+app.get('/games', function (req, res) {
+  res.set('Access-Control-Allow-Origin', '*');
+  res.send(games);
+})
 
 app.get('/users', function (req, res) {
   res.set('Access-Control-Allow-Origin', '*');
@@ -34,7 +39,7 @@ app.get('/gamesUsers', function (req, res) {
 
 app.get('/gamesUsers/:userId', function (req, res) {
   res.set('Access-Control-Allow-Origin', '*');
-  res.send(users.find((gamesUsers) => gamesUsers.id_user == req.params.userId));
+  res.send(gamesUsers.find((gamesUsers) => gamesUsers.id_user == req.params.userId));
 })
 
 app.listen(process.env.PORT || 8080, () => console.log("jestem gotuw na twojego fiuta, kogucie"))
