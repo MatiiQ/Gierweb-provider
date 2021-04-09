@@ -20,7 +20,7 @@ provider for gierweb app
   https://gier-web.herokuapp.com/games/genres/RPG
 
 3. Games with specified name (or part of it)
-  https://gier-web.herokuapp.com/games/find/kon
+  https://gier-web.herokuapp.com/games/find/Kon
 ### USERS
 1. User with specified ID
   https://gier-web.herokuapp.com/users/1    
