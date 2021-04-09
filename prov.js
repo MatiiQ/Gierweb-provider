@@ -66,4 +66,10 @@ app.get('/games/genres/:genre', function (req, res) {
   res.send(games.filter((game) => game.genre == req.params.genre));
 })
 
+// Games with specified name (or part of it)
+app.get('/games/find/:name', function (req, res) {
+  res.set('Access-Control-Allow-Origin', '*');
+  res.send(games.filter((game) => game.game_name.includes(req.params.name)));
+})
+
 app.listen(process.env.PORT || 8080, () => console.log("jestem gotuw na twojego fiuta, kogucie"))
