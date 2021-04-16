@@ -65,4 +65,4 @@ app.get('/games/find/:name', function (req, res) {
   res.send(games.filter((game) => game.game_name.toLowerCase().includes(req.params.name.toLowerCase())));
 })
 
-app.listen(process.env.PORT || 8080, () => console.log("jestem gotuw na twojego fiuta, kogucie"))
+app.listen(process.env.PORT || 8080, () => console.log("jestem gotuw na teges szmeges fą fą fą"))
