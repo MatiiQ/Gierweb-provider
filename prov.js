@@ -34,11 +34,6 @@ app.get('/users/gender/:userGender', function (req, res) {
   res.send(users.filter((user) => user.gender == req.params.userGender));
 })
 
-// Looking for users with tidies xddd
-app.get('/users/find/tidies', function (req, res) {
-  res.send(users.filter((user) => user.first_name.includes('tit')));
-})
-
 // Pairs of IDs for game and specified user (what games that user has)
 app.get('/gamesUsers/user/:id_user', function (req, res) {
   res.send(gamesUsers.filter((gamesUsers) => gamesUsers.id_user == req.params.id_user));
